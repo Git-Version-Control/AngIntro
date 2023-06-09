@@ -1,0 +1,11 @@
+<p>chaitra works!</p>
+<button type="button" (click)="onEditClick()">Edit me</button>
+
+<div *ngIf="canEdit; else noEdit">
+    <!-- <p>You can edit this </p> -->
+    <p [contentEditable]="canEdit">{{message}}</p>
+</div>
+<ng-template #noEdit>
+    <p>The following paragraph is read only. Try clicking the button!</p>
+</ng-template>
+<!-- <p [contentEditable]="canEdit">{{message}}</p> -->
